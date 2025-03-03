@@ -1,0 +1,11 @@
+{
+  "author": {
+    "name": "Matthew Miner",
+    "email": "matthew@matthewminer.com"
+  },
+  "description": "Visualizes positions in the scene view.",
+  "displayName": "Position Visualizer",
+  "name": "com.matthewminer.position-visualizer",
+  "unity": "6000.0",
+  "version": "1.0.0"
+}
