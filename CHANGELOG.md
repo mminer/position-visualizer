@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Only frame new point when added via scene overlay
+
 ### Fixed
 
 - Save after clearing points

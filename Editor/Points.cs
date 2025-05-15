@@ -33,7 +33,6 @@ namespace PositionVisualizer
             }
 
             Save();
-            Frame(positions);
         }
 
         public static void Clear()
@@ -70,23 +69,6 @@ namespace PositionVisualizer
                     Handles.Label(position, $"({position.x:0.##}, {position.y:0.##}, {position.z:0.##})");
                 }
             }
-        }
-
-        static void Frame(Vector3[] positions)
-        {
-            if (positions == null || positions.Length == 0)
-            {
-                return;
-            }
-
-            var bounds = new Bounds(positions[0], Vector3.one);
-
-            for (var i = 1; i < positions.Length; i++)
-            {
-                bounds.Encapsulate(positions[i]);
-            }
-
-            SceneView.lastActiveSceneView.Frame(bounds, false);
         }
 
         static void Load()

@@ -44,6 +44,10 @@ namespace PositionVisualizer
             {
                 var point = new Vector3(xField.value, yField.value, zField.value);
                 Points.Add(point);
+
+                // Frame newly-added point.
+                var bounds = new Bounds(point, Vector3.one);
+                SceneView.lastActiveSceneView.Frame(bounds, false);
             }) { text = "Add" };
 
             var clearButton = new Button(Points.Clear) { text = "Clear" };
