@@ -40,6 +40,7 @@ namespace PositionVisualizer
         public static void Clear()
         {
             points.Clear();
+            Save();
         }
 
         internal static void DrawInSceneView(SceneView sceneView)
