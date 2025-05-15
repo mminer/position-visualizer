@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Save after clearing points
 
+### Removed
+
+- Remove overloaded `Points.Add` function
+
 ## [1.0.0] - 2025-03-02
 
 ### Added

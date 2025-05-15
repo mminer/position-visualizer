@@ -16,14 +16,13 @@ namespace PositionVisualizer
             Load();
         }
 
-        public static void Add(float x, float y, float z)
-        {
-            var position = new Vector3(x, y, z);
-            Add(position);
-        }
-
         public static void Add(params Vector3[] positions)
         {
+            if (positions == null)
+            {
+                throw new System.ArgumentNullException(nameof(positions));
+            }
+
             foreach (var position in positions)
             {
                 var color = PositionVisualizerSettings.randomizePointColor

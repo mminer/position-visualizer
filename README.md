@@ -44,11 +44,11 @@ using PositionVisualizer;
 
 ...
 
-Points.Add(new[] {
+Points.Add(
     new Vector3(1, 0, 0),
     new Vector3(0, 4, 0),
     new Vector3(6, 0, 2)
-});
+);
 
 Points.Clear();
 ```

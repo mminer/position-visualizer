@@ -1,5 +1,6 @@
 using UnityEditor;
 using UnityEditor.Overlays;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace PositionVisualizer
@@ -41,7 +42,8 @@ namespace PositionVisualizer
 
             var addButton = new Button(() =>
             {
-                Points.Add(xField.value, yField.value, zField.value);
+                var point = new Vector3(xField.value, yField.value, zField.value);
+                Points.Add(point);
             }) { text = "Add" };
 
             var clearButton = new Button(Points.Clear) { text = "Clear" };
