@@ -8,7 +8,7 @@ namespace PositionVisualizer
     {
         const string editorPrefsKey = "PositionVisualizer.points";
 
-        static readonly List<(Vector3, Color)> points = new();
+        static readonly List<(Vector3 position, Color color)> points = new();
 
         static Points()
         {
@@ -25,6 +25,11 @@ namespace PositionVisualizer
 
             foreach (var position in positions)
             {
+                if (Contains(position))
+                {
+                    continue;
+                }
+
                 var color = PositionVisualizerSettings.randomizePointColor
                     ? new Color(Random.value, Random.value, Random.value)
                     : PositionVisualizerSettings.pointColor;
@@ -69,6 +74,11 @@ namespace PositionVisualizer
                     Handles.Label(position, $"({position.x:0.##}, {position.y:0.##}, {position.z:0.##})");
                 }
             }
+        }
+
+        static bool Contains(Vector3 position)
+        {
+            return points.FindIndex(point => point.position == position) != -1;
         }
 
         static void Load()
