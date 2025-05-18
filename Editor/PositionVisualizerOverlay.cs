@@ -13,6 +13,11 @@ namespace PositionVisualizer
             SceneView.duringSceneGui += Points.DrawInSceneView;
         }
 
+        ~PositionVisualizerOverlay()
+        {
+            SceneView.duringSceneGui -= Points.DrawInSceneView;
+        }
+
         public override VisualElement CreatePanelContent()
         {
             const int fieldWidth = 50;

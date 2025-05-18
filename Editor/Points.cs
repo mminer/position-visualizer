@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace PositionVisualizer
 {
@@ -12,7 +14,6 @@ namespace PositionVisualizer
 
         static Points()
         {
-            PositionVisualizerSettings.LoadSettings();
             Load();
         }
 
@@ -20,7 +21,7 @@ namespace PositionVisualizer
         {
             if (positions == null)
             {
-                throw new System.ArgumentNullException(nameof(positions));
+                throw new ArgumentNullException(nameof(positions));
             }
 
             foreach (var position in positions)
