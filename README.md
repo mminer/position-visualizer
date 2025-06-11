@@ -7,7 +7,7 @@ scene.
 ![Position Visualizer](Documentation~/position-visualizer.gif)
 
 
-## Installation
+## Installing
 
 Add the package to your project via
 [UPM](https://docs.unity3d.com/Manual/upm-ui.html) using the Git URL:
@@ -16,10 +16,27 @@ Add the package to your project via
 https://github.com/mminer/position-visualizer.git
 ```
 
+1. Open the Package Manager window in Unity (*Window > Package Manager*)
+2. Click the "+" button in the top-left corner
+3. Select "Install package from git URL..."
+4. Enter the above Git URL
+5. Click "Install"
+
+Alternatively, add the following line to your `Packages/manifest.json` file:
+
+```json
+{
+  "dependencies": {
+    "com.matthewminer.position-visualizer": "https://github.com/mminer/position-visualizer.git",
+    ...
+  }
+}
+```
+
 You can also clone the repository and point UPM to your local copy.
 
 
-## Usage
+## Using
 
 After installing the package, the **VP** (Visualize Position) button
 appears in the scene view toolbar. Click this to open the overlay.
